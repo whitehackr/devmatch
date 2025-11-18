@@ -21,6 +21,34 @@ DevMatch analyzes your **actual code contributions** on GitHub and compares them
 
 Unlike resume matchers that rely on keywords, DevMatch proves technical competency through actual code analysis. Your GitHub repositories become your verified skill portfolio.
 
+## Features
+
+### Core Functionality
+- ✅ **Direct Job Description Paste** (recommended, bypasses scraping)
+- ✅ **Job URL Scraping** (Indeed, Google Jobs, LinkedIn support)
+- ✅ **Deep GitHub Analysis** (languages, frameworks, tools)
+- ✅ **NLP Skill Extraction** (100+ technical skills taxonomy)
+- ✅ **Multi-Factor Matching** (weighted required/preferred skills)
+- ✅ **Evidence-Based Results** (proof from actual code)
+- ✅ **Actionable Recommendations** (APPLY_NOW/COMPETITIVE/SKILL_GAP)
+- ✅ **Gap Analysis** (missing skills, learning time estimates)
+
+### Technical Highlights
+- 🏗️ **Stateless Architecture** (no database, easy scaling)
+- 🧪 **Test-Driven Development** (80%+ test coverage)
+- 📱 **Mobile-First Design** (responsive on all devices)
+- ⚡ **Fast Response Times** (30-60 seconds typical)
+- 🔒 **Secure** (HTTPS, input validation, no data retention)
+- 📊 **Transparent Algorithm** (no black-box ML)
+- 🎨 **Clean UI** (TailwindCSS, accessible design)
+
+### Developer Experience
+- 🐳 **Docker Support** (one-command local setup)
+- 📚 **Comprehensive Docs** (architecture, API, deployment)
+- 🏛️ **Architecture Decision Records** (ADRs for key decisions)
+- 🔧 **Easy Local Development** (hot reload, detailed logs)
+- 🚀 **Production-Ready** (Railway + Vercel deployment)
+
 ## Quick Start
 
 ### Prerequisites
@@ -50,10 +78,20 @@ npm start
 
 Visit `http://localhost:3000` to use the application.
 
-### Run with Docker
+### Run with Docker Compose (Recommended)
 
 ```bash
+# Copy environment template
+cp .env.example .env
+
+# Optional: Add your GitHub token to .env for higher rate limits
+
+# Start all services
 docker-compose up
+
+# Frontend: http://localhost:3000
+# Backend API: http://localhost:8000
+# API Docs: http://localhost:8000/docs
 ```
 
 ## Architecture
