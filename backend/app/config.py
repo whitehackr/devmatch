@@ -13,7 +13,12 @@ class Settings(BaseSettings):
     environment: str = "development"
 
     # CORS
-    cors_origins: List[str] = ["http://localhost:3000"]
+    cors_origins: str = "http://localhost:3000"
+
+    @property
+    def cors_origins_list(self) -> List[str]:
+        """Parse CORS origins from comma-separated string"""
+        return [origin.strip() for origin in self.cors_origins.split(",")]
 
     # GitHub API
     github_token: str = ""  # Optional: for higher rate limits
