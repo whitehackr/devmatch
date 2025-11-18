@@ -30,7 +30,8 @@ class GitHubClient:
             "User-Agent": "DevMatch-Analyzer/1.0",
         }
 
-        if self.token:
+        # Only add Authorization header if token exists and is not empty
+        if self.token and self.token.strip():
             self.headers["Authorization"] = f"token {self.token}"
 
     async def get_user_profile(self, username: str) -> Dict:
